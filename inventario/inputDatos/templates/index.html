@@ -1,0 +1,9 @@
+{% if inventario %}
+    <ul>
+    {% for prod in inventario %}
+        <li><p>{{prod.id}} {{prod.name}} {{prod.propietary}} {{prod.quantity}}</p> <a href="{% url 'inputDatos:venta' prod.idem%}">Venta</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

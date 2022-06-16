@@ -6,6 +6,8 @@ class Enterprise(models.Model):
     unique_id = models.CharField(max_length=6, primary_key=True)
     name = models.CharField(max_length=200, default="chamaco")
     telephone = models.IntegerField(max_length=15, default=0)
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
     idem = models.BigAutoField(primary_key=True)
@@ -17,4 +19,6 @@ class Product(models.Model):
     width = models.FloatField(default=0)
     height = models.FloatField(default=0)
     grosor = models.FloatField(default=0)
+    def __str__(self):
+        return self.name
     

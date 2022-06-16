@@ -1,0 +1,9 @@
+{% if producto %}
+    <ul>
+    {% for prod in producto %}
+        <li><p>{{prod.id}} {{prod.name}}</p> <a href="{% url 'inputDatos:venta' prod.idem%}">yeah</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
