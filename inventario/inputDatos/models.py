@@ -14,7 +14,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200, default="nombre_no_registrado")
     propietary = models.ForeignKey(Enterprise, on_delete=models.CASCADE)
     unitary_price = models.FloatField(default=0)
-    quantity = models.IntegerField(default=0)
+    quantity = models.PositiveBigIntegerField(default=0)
     color = models.CharField(max_length=200, default="chamaco")
     width = models.FloatField(default=0)
     height = models.FloatField(default=0)
